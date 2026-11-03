@@ -1,3 +1,92 @@
-/* TODO: Style the product card container */
+.card {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #e4e9f1;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #ffffff 0%, #fbfcfe 100%);
+  box-shadow: 0 8px 24px rgb(22 36 66 / 5%);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
 
-/* TODO: Add special styling for out-of-stock products */
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd6e7;
+  box-shadow: 0 14px 32px rgb(22 36 66 / 10%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 22px !important;
+}
+
+.productMark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  background: #eaf0ff;
+  color: #3559c7;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.name {
+  color: #19243a;
+  font-size: 1.12rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.price {
+  color: #19243a;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+}
+
+.status {
+  font-weight: 650 !important;
+}
+
+.inStock.status {
+  background: #e8f7ef;
+  color: #167447;
+}
+
+.outOfStock.card {
+  border-color: #ebdfe2;
+  background: linear-gradient(145deg, #fff 0%, #fbf7f8 100%);
+}
+
+.outOfStock.productMark {
+  background: #f7ebed;
+  color: #9c5663;
+}
+
+.outOfStock.status {
+  background: #f8ebed;
+  color: #a14351;
+}
+
+.removeButton {
+  color: #778198 !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
+
+.removeButton:hover {
+  background: #f8ebed !important;
+  color: #a14351 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
